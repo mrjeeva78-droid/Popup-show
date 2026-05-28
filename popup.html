@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<style>
+    .overlay{
+        background-color: black;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        opacity: 0.8;
+        display: none;
+        z-index: 1;
+
+    }
+    .popup{
+        background-color: white;
+        width: 30%;
+        position: absolute;
+        border-radius: 10px;
+        padding: 30px;
+        left: 35%;
+        z-index: 2;
+        display: none;
+       
+    }
+
+
+</style>
+    <div class="overlay"></div>
+    <button class="btn">show</button>
+    <div class="popup">
+        <p>hello guys welcome to my popup window Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam ullam, adipisci inventore explicabo exercitationem aliquam qui molestias sequi fuga praesentium eum totam laboriosam quis veniam non saepe ipsa temporibus laudantium. </p>
+        <button class="closebtn">close</button>
+    </div>
+
+    <script>
+        var button =document.querySelector('.btn')
+        button.addEventListener("click",function(){
+            var popups =document.querySelector('.popup')
+            var overlay = document.querySelector('.overlay')
+            
+            popups.style.display = "block"
+            overlay.style.display = "block"
+        })
+
+
+        var buttons =document.querySelector('.closebtn')
+        buttons.addEventListener("click",function(){
+            var popups =document.querySelector('.popup')
+            var overlay = document.querySelector('.overlay')
+            
+            popups.style.display = "none"
+            overlay.style.display = "none"
+        })
+
+    </script>
+</body>
+</html>
